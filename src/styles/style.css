@@ -1,0 +1,9 @@
+:root{
+    --primary: #fff;
+    --sec: #ddd;
+    --word: black;
+}
+
+body{
+    background-color: var(--word);
+}
