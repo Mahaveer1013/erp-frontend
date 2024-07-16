@@ -56,14 +56,14 @@ header ul {
 
 header ul li {
     font-size: 14px;
-    padding: 12px 5px;
+    padding: 8px 5px;
     cursor: pointer;
     border-radius: 5px;
     border-bottom: 4px solid transparent;
 }
 
 header ul li a {
-    padding: 12px 5px;
+    padding: 8px 5px;
     color: var(--sec);
 }
 
