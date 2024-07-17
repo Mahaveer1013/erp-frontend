@@ -1,0 +1,154 @@
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: var(--header-bg);
+    position: absolute;
+    top: 0;
+    overflow-x: clip;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    width: 300px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    margin-top: auto;
+}
+
+header ul li {
+    font-size: 14px;
+    padding: 8px 5px;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+}
+
+header ul li a {
+    display: flex;
+    border-radius: 5px;
+    padding: 8px 5px;
+    color: var(--sec);
+}
+
+header ul li a:hover {
+    border-bottom: 4px solid var(--border);
+    color: var(--border);
+}
+
+header ul li a.active{
+    font-weight: 600;
+    background-color: var(--border);
+    border-bottom: 4px solid var(--header-bg);
+    color: black;
+}
+
+header .menu-bar {
+    display: none;
+    margin: auto 0;
+    color: var(--primary);
+    margin-right: 30px;
+    font-size: 20px;
+    padding: 20px;
+}
+
+header .menu-bar:hover {
+    color: var(--border);
+}
+
+/* header .admission a{
+    color: black;
+    background-color: var(--border);
+    font-weight: 600;
+}
+
+header .admission:hover{
+    border-bottom: 4px solid transparent;
+}
+
+header .admission a:hover{
+    color: black;
+} */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+
+@media all and (max-width:1024px) {
+    header ul {
+        margin: 0;
+        padding: 0;
+        padding-top: 15px;
+        transform: translateX(100%);
+        overflow: hidden;
+        position: absolute;
+        flex-direction: column;
+        display: flex;
+        transition: .4s;
+        z-index: -2;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        margin-top: 100px;
+        background-color: var(--header-bg);
+        width: 100%;
+        flex-grow: 0;
+    }
+
+    header .menu-bar {
+        display: block;
+    }
+
+    header ul.open {
+        transform: translateX(0%);
+        /* transform: translateY(0); */
+    }
+
+    header ul li,
+    header ul li a {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    header ul li a {
+        justify-content: center;
+        display: flex;
+        color: var(--primary);
+        border-bottom: 4px solid transparent;
+    }
+
+    header ul li a:hover{
+        color: var(--border);
+        border-bottom: 4px solid transparent;
+    }
+    
+    header ul li a.active{
+        border-bottom: 4px solid var(--border);
+        color: black;
+    }
+}
+
+@media all and (max-width:425px){
+    header img{
+        width: 250px;
+    }
+
+    header{
+        height: 80px;
+    }
+    header ul{
+        margin-top: 80px;
+    }
+}
+

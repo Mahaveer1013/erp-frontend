@@ -4,7 +4,7 @@
     --primary: #fff;
     --sec: #f0f8ff;
     --h1: #000;
-    --header-bg: #494949;
+    --header-bg: #282828;
     --primary-hover: #d1d0d0;
     --border: #ddff00;
 }
@@ -16,9 +16,10 @@
     list-style: none;
 }
 
-.root {
+#root {
     position: relative;
     min-height: 100vh;
+    height: 100vh;
 }
 
 body {
@@ -28,117 +29,11 @@ body {
 
 main {
     padding-top: 100px;
+    height: 100%;
 }
 
-header {
-    height: 100px;
-    width: 100%;
-    background-color: var(--header-bg);
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-}
-
-header img {
-    width: 300px;
-}
-
-header ul {
-    display: flex;
-    list-style: none;
-    margin-right: 20px;
-    flex-grow: 1;
-    justify-content: space-evenly;
-    margin-top: auto;
-}
-
-header ul li {
-    font-size: 14px;
-    padding: 8px 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    border-bottom: 4px solid transparent;
-}
-
-header ul li a {
-    padding: 8px 5px;
-    color: var(--sec);
-}
-
-header ul li a:hover {
-    border-bottom: 4px solid var(--border);
-    color: var(--border);
-}
-
-header ul li a.active{
-    font-weight: 600;
-    background-color: white;
-    border-bottom: 4px solid var(--header-bg);
-}
-
-header ul li a.active{
-    border-bottom: 4px solid var(--header-bg);
-    color: black;
-}
-
-header .menu-bar {
-    display: none;
-    margin: auto 0;
-    color: var(--primary);
-    margin-right: 30px;
-    font-size: 20px;
-    padding: 20px;
-}
-
-header .menu-bar:hover {
-    color: var(--border);
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-
-@media all and (max-width:1024px) {
-    header ul {
-        display: none;
-    }
-
-    header .menu-bar {
-        display: block;
-    }
-
-    header ul.open {
-        height: auto;
-        margin-top: 100px;
-        background-color: var(--header-bg);
-        width: 100%;
-        position: absolute;
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    header ul.open li,
-    header ul.open li a {
-        width: 100%;
-        padding: 5px;
-    }
-
-    header ul.open li a {
-        justify-content: center;
-        display: flex;
-        color: var(--primary);
-        border-bottom: 4px solid transparent;
-    }
-
-    header ul.open li a:hover{
-        color: var(--border);
+@media all and (max-width:425px) {
+    main{
+        padding-top: 80px;
     }
 }
