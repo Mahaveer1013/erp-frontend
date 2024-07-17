@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import Login from './Login';
 import '../styles/head-foot.css'
 import '../styles/login.css'
+import DepartmentDetailPage from './DepartmentDetailPage'
 
 const Main = () => {
     return (
@@ -20,6 +21,7 @@ const Main = () => {
                         <Route path='/' element={<Home />}></Route>
                         <Route path='/assignment' element={<Assignment />} />
                         <Route path='/academic' element={<Academic />} />
+                        <Route path="/departments/:departmentName" element={<DepartmentDetailPage />} />
                         <Route path='/examination' element={<Examination />} />
                         <Route path='/login' element={<Login />} />
                     </Routes>
